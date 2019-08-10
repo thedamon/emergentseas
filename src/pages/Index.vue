@@ -9,14 +9,6 @@
       and collaborations
     </p>
   </header>
-  <section class="team">
-    <h2 class="section-title">Team</h2>
-    <ul class="item-list-team box">
-      <li>Damon Muma</li>
-      <li>Kristin Bennett</li>
-      <li>Cara Moyer</li>
-    </ul>
-  </section>
   <section class="work">
     <h2 class="section-title">Work</h2>
     <ul class="item-list-work">
@@ -38,6 +30,14 @@
     </ul>
   </section>
 
+  <section class="team">
+    <h2 class="section-title">Team</h2>
+    <ul class="item-list-team box">
+      <li>Kristin Bennett</li>
+      <li>Cara Moyer</li>
+      <li>Damon Muma</li>
+    </ul>
+  </section>
   <section class="words">
     <h2 class="section-title">Words</h2>
     <ul class="item-list-words box">
