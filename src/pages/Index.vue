@@ -94,36 +94,29 @@ export default {
 
 <style lang="scss">
 
-body {
-  font-size: 18px;
-  @media (min-width: 500px) {
-    font-size: 20px;
-  }
-}
-
-
-/* weird */
 html {
   background: rgba(89, 104, 107, 1);
 
-  --something: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgb(50, 50, 80) 0%,
-    rgba(89, 104, 107, 1) 100%
-  );
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 40px;
-  color: rgba(255, 255, 255, 0.445);
-  background-attachment: fixed;
-  overflow-x: hidden;
+&.index body {
+    font-size: 18px;
+    @media (min-width: 500px) {
+      font-size: 20px;
+    }
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgb(50, 50, 80) 0%,
+      rgba(89, 104, 107, 1) 100%
+    );
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 40px;
+    color: rgba(255, 255, 255, 0.445);
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
 }
 </style>
 <style lang="scss" scoped>
