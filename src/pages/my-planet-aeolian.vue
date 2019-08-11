@@ -176,11 +176,7 @@
       </main>
      
       <div class="embed-container">
-        <iframe
-          allowfullscreen
-          frameborder="0"
-          src="~/images/lYFZSF-NJiM.html"
-        ></iframe>
+        <iframe src='https://www.youtube.com/embed/lYFZSF-NJiM' frameborder='0' allowfullscreen></iframe>
       </div>
       <main>
         <h2 class="new-section">Special Thanks:</h2>
