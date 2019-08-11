@@ -1,5 +1,5 @@
 <template>
-<div class="index">
+<div class="homepage">
   <header class="site-intro" :class="{showInfo: showInfo}">
     <h1>emergent<wbr>.seas</h1>
     <p class="tagline">
@@ -11,10 +11,10 @@
       <br>
       <span>original, collaborative, undisciplined</span>
     </p>
-    <button :class="{on: showInfo}" @click="toggleInfo" aria-label="what was that? tell me more.">{{ showInfo ? 'shhh!':'?????' }}</button>
+    <button :class="{on: showInfo}" @click="toggleInfo" aria-label="what was that? tell me more.">{{ showInfo ? 'shhh! ^':'????? ⌄' }}</button>
       <div v-if="showInfo" :style="{color: 'fff'}">
         <p>
-          We're a pretty slow paced group of word, movement and theatre artists making stuff in and around our "real" lives.
+          We're a pretty slow paced group of word, movement and theatre artists making stuff as life allows.
         </p>
         <p>
           We focus on creating new works, punching tradition, and we delight in finding practitioners from other fields to collaborate with.
@@ -24,6 +24,7 @@
         </p>
       </div>
   </header>
+  <main>
   <section class="work">
     <h2 class="section-title">Work</h2>
     <ul class="item-list-work">
@@ -60,7 +61,7 @@
     </ul>
   </section>
 
-
+</main>
   <footer>
     <p class="small">
       site copyright and designed rights deserved etc etc
@@ -152,12 +153,27 @@ a {
   }
 }
 
+// gimme a griddy thing:
+
+.homepage {
+  @media (min-width: 1200px) {
+    display: grid;
+    // grid-auto-columns: minmax(600px, auto);
+    // grid-template-columns: 1fr 1fr;
+
+    grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+    grid-gap: 50px;
+  }
+}
+
+
 .site-intro {
   top: 50px;
   left: calc(10vw + 5px);
   width: 400px;
   max-width: calc(90vw - 36px);
   position: relative;
+  align-self: start;
 
   
   &:before {
@@ -244,7 +260,7 @@ section {
 }
 
 .work {
-  margin-top: 200px;
+  margin-top: 240px;
 }
 
 .box {
@@ -339,9 +355,11 @@ button {
   &:focus,
   &:hover {
     outline: none;
+    box-shadow: 0px 0px 0px 2px #000, 0px 0px 0px 3px #ccc;
+  }
+  &:hover {
     transform: skew(0.06turn, -10deg) scale(1.05);
     opacity: 1;
-    box-shadow: 0px 0px 0px 2px #000, 0px 0px 0px 3px #ccc;
   }
   &.on {
     transform: skew(0.06turn, -10deg);
