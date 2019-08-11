@@ -335,8 +335,7 @@ button {
   &:focus,
   &:hover {
     outline: none;
-    transform: skew(0.06turn, -10deg);
-    scale: 1.1;
+    transform: skew(0.06turn, -10deg) scale(1.05);
     opacity: 1;
     box-shadow: 0px 0px 0px 2px #000, 0px 0px 0px 3px #ccc;
   }
