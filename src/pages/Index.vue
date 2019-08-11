@@ -11,7 +11,7 @@
       <br>
       <span>original, collaborative, undisciplined</span>
     </p>
-    <button @click="toggleInfo" :style="{zIndex: 100, position: 'relative'}" aria-label="what was that? tell me more.">{{ showInfo ? 'shhh!':'?????' }}</button>
+    <button :class="{on: showInfo}" @click="toggleInfo" aria-label="what was that? tell me more.">{{ showInfo ? 'shhh!':'?????' }}</button>
       <div v-if="showInfo" :style="{color: 'fff'}">
         <p>
           We're a pretty slow paced group of word, movement and theatre artists making stuff in and around our "real" lives.
@@ -317,16 +317,35 @@ button {
   background: transparent;
   border: 1px #ccc solid;
   color: #ccc;
-  transform: skew(-0.06turn, 10deg);
+  transform: skew(0.02turn, 4deg);
+  position: relative;
   transition: transform .5s;
   opacity: .75;
   cursor: pointer;
 
+  &:before{
+      position:absolute;
+      content:'';
+      top:-10px;
+      right:-10px;
+      left:-10px;
+      bottom:-10px;
+  }
+
+  &:focus,
   &:hover {
-    transform: skew(-0.02turn, 4deg);
+    outline: none;
+    transform: skew(0.06turn, -10deg);
     scale: 1.1;
     opacity: 1;
     box-shadow: 0px 0px 0px 2px #000, 0px 0px 0px 3px #ccc;
+  }
+  &.on {
+    transform: skew(0.06turn, -10deg);
+
+    // &:hover {
+    //   transform: skew(0.02turn, 4deg);
+    // }
   }
 }
 </style>
