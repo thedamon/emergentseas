@@ -1,13 +1,28 @@
 <template>
 <div>
-  <header class="site-intro">
+  <header class="site-intro" :class="{showInfo: showInfo}">
     <h1>emergent<wbr>.seas</h1>
     <p class="tagline">
-      creating original,
+      <!-- creating original,
       undisciplined 
       performances, expressions
-      and collaborations
+      and collaborations -->
+      theatre &nbsp; art &nbsp; performance <br>&nbsp;or whatever
+      <br>
+      <span>original, collaborative, undisciplined</span>
     </p>
+    <button @click="toggleInfo" :style="{zIndex: 100, position: 'relative'}" aria-label="what was that? tell me more.">{{ showInfo ? 'shhh!':'?????' }}</button>
+      <div v-if="showInfo" :style="{color: 'fff'}">
+        <p>
+          We're a pretty slow paced group of word, movement and theatre artists making stuff in and around our "real" lives.
+        </p>
+        <p>
+          We focus on creating new works, punching tradition, and we delight in finding practitioners from other fields to collaborate with.
+        </p>
+        <p>
+          We are based in London, Ontario.
+        </p>
+      </div>
   </header>
   <section class="work">
     <h2 class="section-title">Work</h2>
@@ -18,14 +33,14 @@
         <ul class="version-list">
           <li><a href="./my-planet-fringe">at 2017 London Fringe</a></li>
           <li><a href="./my-planet-aeolian">Aeolian Hall collaborative redux</a></li>
-          <li><a href="./my-planet-film">Short film</a></li>
+          <li><a href="https://www.youtube.com/watch?v=lYFZSF-NJiM">Short film</a></li>
         </ul>
       </li>
       <li class="box">
         <h3 class="item-title">The Dramatic Weather Unit</h3>
         <p>An interactive animated poem, illustrated by Antony Hare.</p>
         <!-- <a href="/dramatic-weather-unit">Visit project</a> -->
-        <p><em>Coming soon.</em></p>
+        <p><em>2019ish</em></p>
       </li>
     </ul>
   </section>
@@ -58,6 +73,16 @@
 export default {
   metaInfo: {
     title: 'EmergentSeas'
+  },
+  data(){
+    return {
+      showInfo: false
+    }
+  },
+  methods: {
+    toggleInfo: function(){
+      this.showInfo = !this.showInfo
+    }
   }
 }
 </script>
@@ -129,6 +154,7 @@ a {
   width: 400px;
   max-width: calc(90vw - 36px);
   position: relative;
+
   
   &:before {
     content: "";
@@ -141,6 +167,18 @@ a {
     background: linear-gradient(4deg, black 0%, #202033 80%);
     clip-path: polygon(7% 8%, 100% 0%, 89% 99%, 0% 84%);
     z-index: 0;
+    transition: clip-path 1s;
+  }
+
+  &.showInfo:before {
+    clip-path: polygon(3% 9%, 100% 0%, 82% 100%, 2% 84%);
+  }
+
+
+
+  > * {
+    z-index: 1;
+    position: relative;
   }
 }
 
@@ -179,12 +217,17 @@ h3 {
 }
 
 .tagline {
-  font-size: calc(20px + .5vw);
+  font-size: calc(22px + .5vw);
   margin: 0;
   color: #fff;
   opacity: 0.5;
+  // text-transform: uppercase;
+  // font-size: calc(16px + .5vw);
   @media (min-width: 500px) {
     margin-left: 26px;
+  }
+  span {
+    font-size: calc(16px + .4vw);
   }
 }
 
@@ -266,4 +309,19 @@ footer {
   font-size: 12px;
 }
 
+button {
+  background: transparent;
+  border: 1px #ccc solid;
+  color: #ccc;
+  transform: skew(-0.06turn, 10deg);
+  transition: transform .5s;
+  opacity: .75;
+  cursor: pointer;
+
+  &:hover {
+    transform: skew(-0.02turn, 4deg);
+    scale: 1.1;
+    opacity: 1;
+  }
+}
 </style>
