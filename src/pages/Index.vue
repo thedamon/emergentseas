@@ -156,12 +156,12 @@ a {
 // gimme a griddy thing:
 
 .homepage {
-  @media (min-width: 1200px) {
+  @media (min-width: 900px) {
     display: grid;
     // grid-auto-columns: minmax(600px, auto);
     // grid-template-columns: 1fr 1fr;
 
-    grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
     grid-gap: 50px;
   }
 }
