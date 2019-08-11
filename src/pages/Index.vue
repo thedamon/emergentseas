@@ -235,8 +235,12 @@ section {
   max-width: 700px;
   margin-left: auto;
   margin-right: 40px;
-  margin-top: 160px;
+  margin-top: 170px;
   padding-left: 20px;
+}
+
+.work {
+  margin-top: 200px;
 }
 
 .box {
@@ -322,6 +326,7 @@ button {
     transform: skew(-0.02turn, 4deg);
     scale: 1.1;
     opacity: 1;
+    box-shadow: 0px 0px 0px 2px #000, 0px 0px 0px 3px #ccc;
   }
 }
 </style>
