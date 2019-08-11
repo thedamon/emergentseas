@@ -1,10 +1,10 @@
 
 <template>
 <!-- submit your PRs at: https://github.com/thedamon/emergentseas -->
-  <div class="index">
+  <div class="my-planet-fringe">
     <pre aria-hidden="true">✷  · 　 　      　　.  　　 　　 　    　✵   ✷  　　  ·     　　  　　 　　✵  *  .         　　　　.  　 　 　　     　* 　　　 　　 · ✦         ✦ .· 　　 ·      ✦  ✵  · . 　  　   *      .          * 　 　　　　✷     .    　.         ·  　 .   　·. ✷   ⋆   ✹  . 　　 ✵      +  ˚      * 　　　　　* 　　　　　　  ⋆ 　　 ✧ *  · 　 . 　 ✧ ˚ 　 *   　 +  ˚   · .  .　　*  * 　 ˚  .　　　　　 +  　　　 *  *　　 　 　.  ·✵  . 　   ˚ . 　  ✵　 　　　 　　　　.  ˚ 　  　  　 ✧ ·  　　 ⊹ *  .  　　  　 　  　 · 　　　　　　　 ✦  ⊹ 　  　 　  　　   ✵                         ˚ 　　        ✹   .  　　   ✦ 　 *     　　  ✹  ˚   　   ·.　    　　 *　✷   　　　　　    　　  　　 .  　* ·  　     ✺ 　　　　　　　　.   *  　    　 ˚  　　 ✧    ⋆  *   　　 ✦  ·     　 *   . 　✵   *　     ··  　　 　　 　　 　　　　    　　　　 · . .  .  ✦ 　      ✵ * .  ·　　　　　 . 　　　     · ˚ 　 ·     ✵   　　 .　　 　　 . ·     .  .   　     ˚     　 　 ˚  *  ˚     　　. · * 　 　　　　    　 　 　 ⋆ 　　　　 　　     　   　　　 . 　　　  . 　　    　　  ⋆ 　　　　　 .    ˚ 　 　　　　　　　✷      　　 · 　　　　　     　　  　  　 　 　  　 ⋆     · 　*  .  ✧ ˚ 　 .  ✦ *      * 　· 　  　　 　　　    　 ·  ·  　 　✷        　 ✫ · *  ✹    </pre>
     <div class="container">
-      <header>
+      <header class="fringe-header">
         <p class="presenter"><strong>EmergentSeas</strong> presents</p>
         <h1>My&nbsp;Planet &amp;&nbsp;Me</h1>
 
@@ -71,11 +71,17 @@
     </div>
 </div>
 </template>
-
-<style lang="scss">
-  /*@mixin f($px){
-    font-size: calc($px - 10 + 5vw);
-  }*/
+<script>
+export default {
+  metaInfo: {
+    title: 'My Planet and Me at the 2017 London Fringe :: EmergentSeas',
+    htmlAttrs: {
+      class: 'my-planet-fringe' 
+    }
+  },
+}
+</script>
+<style>
   html {
     background-color: black;
     color: white;
@@ -87,6 +93,25 @@
   body {
     margin: 0;
   }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    z-index: -1;
+    background: url('~@/images/starfield.jpg');
+    background-size: cover;
+  }
+</style>
+<style lang="scss" scoped>
+  /*@mixin f($px){
+    font-size: calc($px - 10 + 5vw);
+  }*/
+
   h1, h2, h3, h4 {
     font-weight: normal;
   }
@@ -122,20 +147,7 @@
   header h2 {
     margin: 10px 0;
   }
-  body {}
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .4;
-    z-index: -1;
-    background: url('/starfield.jpg');
-    background-size: cover;
-  }
+
 
   a {
     color: white;

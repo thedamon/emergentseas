@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="my-planet-aeolian">
     <pre aria-hidden="true">✷  · 　 　      　　.  　　 　　 　    　✵   ✷  　　  ·     　　  　　 　　✵  *  .         　　　　.  　 　 　　     　* 　　　 　　 · ✦         ✦ .· 　　 ·      ✦  ✵  · . 　  　   *      .          * 　 　　　　✷     .    　.         ·  　 .   　·. ✷   ⋆   ✹  . 　　 ✵      +  ˚      * 　　　　　* 　　　　　　  ⋆ 　　 ✧ *  · 　 . 　 ✧ ˚ 　 *   　 +  ˚   · .  .　　*  * 　 ˚  .　　　　　 +  　　　 *  *　　 　 　.  ·✵  . 　   ˚ . 　  ✵　 　　　 　　　　.  ˚ 　  　  　 ✧ ·  　　 ⊹ *  .  　　  　 　  　 · 　　　　　　　 ✦  ⊹ 　  　 　  　　   ✵                         ˚ 　　        ✹   .  　　   ✦ 　 *     　　  ✹  ˚   　   ·.　    　　 *　✷   　　　　　    　　  　　 .  　* ·  　     ✺ 　　　　　　　　.   *  　    　 ˚  　　 ✧    ⋆  *   　　 ✦  ·     　 *   . 　✵   *　     ··  　　 　　 　　 　　　　    　　　　 · . .  .  ✦ 　      ✵ * .  ·　　　　　 . 　　　     · ˚ 　 ·     ✵   　　 .　　 　　 . ·     .  .   　     ˚     　 　 ˚  *  ˚     　　. · * 　 　　　　    　 　 　 ⋆ 　　　　 　　     　   　　　 . 　　　  . 　　    　　  ⋆ 　　　　　 .    ˚ 　 　　　　　　　✷      　　 · 　　　　　     　　  　  　 　 　  　 ⋆     · 　*  .  ✧ ˚ 　 .  ✦ *      * 　· 　  　　 　　　    　 ·  ·  　 　✷        　 ✫ · *  ✹    </pre>
     <div class="container">
       <header>
@@ -190,6 +190,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    title: 'My Planet and Me at Aeolian Hall :: EmergentSeas',
+    htmlAttrs: {
+      class: 'my-planet-aeolian' 
+    }
+  },
+}
+</script>
+
 <style>
 html {
   background-color: #000;
@@ -202,6 +213,22 @@ html {
 body {
   margin: 0;
 }
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: -1;
+  background: url(~@/images/starfield.jpg);
+  background-size: cover;
+}
+</style>
+<style scoped>
+
 h1,
 h2,
 h3,
@@ -268,19 +295,7 @@ h2 {
 header h2 {
   margin: 10px 0;
 }
-body:before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.4;
-  z-index: -1;
-  /* background: url(~/images/starfield.jpg); */
-  background-size: cover;
-}
+
 a {
   color: #fff;
   text-decoration: none;

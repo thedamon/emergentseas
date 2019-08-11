@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="index">
   <header class="site-intro" :class="{showInfo: showInfo}">
     <h1>emergent<wbr>.seas</h1>
     <p class="tagline">
@@ -72,13 +72,17 @@
 <script>
 export default {
   metaInfo: {
-    title: 'EmergentSeas'
+    title: 'EmergentSeas',
+    htmlAttrs: {
+      class: 'index' 
+    }
   },
   data(){
     return {
       showInfo: false
     }
   },
+
   methods: {
     toggleInfo: function(){
       this.showInfo = !this.showInfo
@@ -87,33 +91,16 @@ export default {
 }
 </script>
 
+
 <style lang="scss">
-/* some variables for y'all */
-
-$font-fam-base: "PT Serif", 'Times New Roman', Times, serif;
-$font-fam-display: "Open Sans", Helvetica, Arial, sans-serif;
-
-
-/* basic reset and typo */
-ul {
-  margin: 0;
-  padding-left: 1em;
-}
 
 body {
   font-size: 18px;
   @media (min-width: 500px) {
-  font-size: 20px;
+    font-size: 20px;
   }
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: $font-fam-display;
-}
-
-p, li {
-  font-family: $font-fam-base; 
-}
 
 /* weird */
 html {
@@ -138,6 +125,30 @@ body {
   background-attachment: fixed;
   overflow-x: hidden;
 }
+</style>
+<style lang="scss" scoped>
+/* some variables for y'all */
+
+$font-fam-base: "PT Serif", 'Times New Roman', Times, serif;
+$font-fam-display: "Open Sans", Helvetica, Arial, sans-serif;
+
+
+/* basic reset and typo */
+ul {
+  margin: 0;
+  padding-left: 1em;
+}
+
+
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-fam-display;
+}
+
+p, li {
+  font-family: $font-fam-base; 
+}
+
 
 a {
   color: rgba(255, 255, 255, 0.7);
