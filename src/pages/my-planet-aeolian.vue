@@ -209,7 +209,7 @@ html {
 body {
   margin: 0;
 }
-body:before {
+.my-planet-aeolian body:before {
   content: "";
   position: fixed;
   top: 0;

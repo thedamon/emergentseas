@@ -93,7 +93,7 @@ export default {
   body {
     margin: 0;
   }
-  body::before {
+  .my-planet-fringe body::before {
     content: "";
     position: fixed;
     top: 0;
