@@ -88,6 +88,30 @@ export default {
     toggleInfo: function(){
       this.showInfo = !this.showInfo
     }
+  },
+  mounted(){
+    var h = document.documentElement,
+      b = document.body,
+      st = 'scrollTop',
+      sh = 'scrollHeight',
+      scroll;
+
+    const setScrollVars = function() {
+      scroll = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight);
+      document.documentElement.style.setProperty('--scroll', scroll );
+      document.documentElement.style.setProperty('--scrollPct', scroll * 100 + '%' );
+    }
+
+    document.addEventListener('scroll', setScrollVars);
+    setScrollVars();
+
+
+    document.addEventListener("mousemove", (e) => {
+      document.documentElement.style.setProperty('--mouseX', e.offsetX + "px");
+      document.documentElement.style.setProperty('--mouseXPct', e.offsetX / window.innerWidth);
+      document.documentElement.style.setProperty('--mouseY', e.offsetY + "px");
+    });
+
   }
 }
 </script>
@@ -105,8 +129,9 @@ html {
     }
     margin: 0;
     padding: 0;
+    --mousetate: calc((var(--mouseXPct) - .5) * 10);
     background: linear-gradient(
-      0deg,
+      calc( var(--mousetate) * 5deg),
       rgba(0, 0, 0, 1) 0%,
       rgb(50, 50, 80) 0%,
       rgba(89, 104, 107, 1) 100%
@@ -170,7 +195,7 @@ a {
 .site-intro {
   top: 50px;
   left: calc(10vw + 5px);
-  width: 400px;
+  width: calc(400px + 2vw);
   max-width: calc(90vw - 36px);
   position: relative;
   align-self: start;
@@ -221,7 +246,28 @@ h2 {
   font-weight: normal;
   color: #fff;
   opacity: 0.5;
-  text-shadow: 0px -36px 2px, 0px -72px 4px, 0px -108px 8px;
+  // 36-72-108
+
+  // -(36*.75 + (.25 * --scroll))
+  // font-size: calc((var(--scroll) * 25 * 36px * 75)/100);
+  --n1: -36px;
+  --n2: -72px;
+  --n3: -108px;
+
+// this works simply nicely.
+  --offset1: calc( var(--n1) * .5 + var(--n1) * var(--scroll));
+  --offset2: calc( var(--n2) * .5 + var(--n2) * var(--scroll));
+  --offset3: calc( var(--n3) * .5 + var(--n3) * var(--scroll));
+
+
+// the whatup?
+
+// --offset1: calc((var(--n1) * .5) + (--var(--scroll) * 1 * var(--n1)));
+// --offset2: calc((var(--n2) * .5) + (--var(--scroll) * 1 * var(--n2)));
+// --offset3: calc((var(--n3) * .5) + (--var(--scroll) * 1 * var(--n3)));
+
+
+  text-shadow: 0px var(--offset1) 2px, 0px var(--offset2) 4px, 0px var(--offset3) 8px;
 }
 
 h3 {
