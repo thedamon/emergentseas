@@ -107,9 +107,9 @@ export default {
 
 
     document.addEventListener("mousemove", (e) => {
-      document.documentElement.style.setProperty('--mouseX', e.offsetX + "px");
-      document.documentElement.style.setProperty('--mouseXPct', e.offsetX / window.innerWidth);
-      document.documentElement.style.setProperty('--mouseY', e.offsetY + "px");
+      document.documentElement.style.setProperty('--mouseX', e.clientX + "px");
+      document.documentElement.style.setProperty('--mouseXPct', e.clientX / window.innerWidth);
+      document.documentElement.style.setProperty('--mouseY', e.clientY + "px");
     });
 
   }
