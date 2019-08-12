@@ -39,7 +39,7 @@
       </li>
       <li class="box">
         <h3 class="item-title">The Dramatic Weather Unit</h3>
-        <p>An interactive animated poem, illustrated by Antony Hare.</p>
+        <p>An interactive animated poem, illustrated by <a href="http://ahpi.ca">Antony Hare</a>.</p>
         <!-- <a href="/dramatic-weather-unit">Visit project</a> -->
         <p><em>2019ish</em></p>
       </li>

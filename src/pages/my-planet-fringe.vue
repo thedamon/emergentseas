@@ -82,7 +82,7 @@ export default {
 }
 </script>
 <style>
-  html {
+  .my-planet-fringe {
     background-color: black;
     color: white;
     font-family: 'Open Sans', sans-serif;

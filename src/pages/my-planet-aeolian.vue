@@ -198,7 +198,7 @@ export default {
 </script>
 
 <style>
-html {
+.my-planet-aeolian {
   background-color: #000;
   color: #fff;
   font-family: Open Sans, sans-serif;
