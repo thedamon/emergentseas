@@ -255,9 +255,9 @@ h2 {
   --n3: -108px;
 
 // this works simply nicely.
-  --offset1: calc( var(--n1) * .5 + var(--n1) * var(--scroll));
-  --offset2: calc( var(--n2) * .5 + var(--n2) * var(--scroll));
-  --offset3: calc( var(--n3) * .5 + var(--n3) * var(--scroll));
+  --offset1: calc( var(--n1) * .75 + var(--n1) * var(--scroll));
+  --offset2: calc( var(--n2) * .75 + var(--n2) * var(--scroll));
+  --offset3: calc( var(--n3) * .75 + var(--n3) * var(--scroll));
 
 
 // the whatup?
