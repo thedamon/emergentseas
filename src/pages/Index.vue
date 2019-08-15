@@ -112,6 +112,12 @@ export default {
       document.documentElement.style.setProperty('--mouseY', e.clientY + "px");
     });
 
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', function(e){
+        document.documentElement.style.setProperty('--mouseXPct', e.gamma/1.8+50);
+      });
+    }
+
   }
 }
 </script>
