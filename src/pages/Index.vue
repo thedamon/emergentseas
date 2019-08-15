@@ -1,7 +1,7 @@
 <template>
 <div class="homepage">
   <header class="site-intro" :class="{showInfo: showInfo}">
-    <h1>emergent<wbr><span>⋅</span>seas</h1>
+    <h1>emergen<span class="t">t</span><wbr><span class="dot" aria-hidden>⋅</span>seas</h1>
     <p class="tagline">
       <!-- creating original,
       undisciplined 
@@ -248,6 +248,10 @@ h1 {
   text-shadow: -2px 2px 0px #bbc;
   position: relative;
   z-index: 2;
+
+  .t,.dot {
+    letter-spacing: -1vw;
+  }
 }
 
 h2 {
