@@ -1,7 +1,7 @@
 <template>
 <div class="homepage">
   <header class="site-intro" :class="{showInfo: showInfo}">
-    <h1>emergent<wbr>.seas</h1>
+    <h1>emergent<wbr><span>⋅</span>seas</h1>
     <p class="tagline">
       <!-- creating original,
       undisciplined 
@@ -38,7 +38,7 @@
         </ul>
       </li>
       <li class="box">
-        <h3 class="item-title">The Dramatic Weather Unit</h3>
+        <h3 class="item-title">The Dramatic Weather Agency</h3>
         <p>An interactive animated poem, illustrated by <a href="http://ahpi.ca">Antony Hare</a>.</p>
         <!-- <a href="/dramatic-weather-unit">Visit project</a> -->
         <p><em>2019ish</em></p>
@@ -181,6 +181,7 @@ a {
 // gimme a griddy thing:
 
 .homepage {
+  overflow-x: hidden;
   @media (min-width: 900px) {
     display: grid;
     // grid-auto-columns: minmax(600px, auto);
