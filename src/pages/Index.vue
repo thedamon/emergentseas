@@ -187,7 +187,7 @@ a {
 // gimme a griddy thing:
 
 .homepage {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   @media (min-width: 900px) {
     display: grid;
     // grid-auto-columns: minmax(600px, auto);
@@ -202,16 +202,20 @@ a {
 .site-intro {
   top: 50px;
   left: calc(10vw + 5px);
-  width: calc(400px + 2vw);
-  max-width: calc(90vw - 36px);
+  width: 80vw;
   position: relative;
   align-self: start;
+  @media (min-width: 500px) {
+    width: calc(400px + 2vw);
+    max-width: calc(90vw - 36px);
+  }
 
   
   &:before {
     content: "";
     position: absolute;
     width: 140%;
+    max-width: 95vw;
     height: 140%;
     left: -10%;
     top: -10%;
@@ -328,6 +332,7 @@ section {
     content: "";
     position: absolute;
     width: 125%;
+    max-width: 100vw;
     height: 140%;
     left: -10%;
     top: -10%;
