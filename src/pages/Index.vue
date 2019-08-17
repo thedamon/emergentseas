@@ -76,7 +76,11 @@ export default {
     title: 'EmergentSeas',
     htmlAttrs: {
       class: 'index' 
-    }
+    },
+    // <script src="//console.re/connector.js" data-channel="YOUR-CHANNEL-NAME" id="consolerescript"></script>
+    script: [
+      { src: '//console.re/connector.js', id: 'consolerescript', 'data-channel':'emergent-seas' }
+    ]
   },
   data(){
     return {
@@ -273,13 +277,6 @@ h2 {
   --offset1: calc( var(--n1) * .75 + var(--n1) * var(--scroll));
   --offset2: calc( var(--n2) * .75 + var(--n2) * var(--scroll));
   --offset3: calc( var(--n3) * .75 + var(--n3) * var(--scroll));
-
-
-// the whatup?
-
-// --offset1: calc((var(--n1) * .5) + (--var(--scroll) * 1 * var(--n1)));
-// --offset2: calc((var(--n2) * .5) + (--var(--scroll) * 1 * var(--n2)));
-// --offset3: calc((var(--n3) * .5) + (--var(--scroll) * 1 * var(--n3)));
 
 
   text-shadow: 0px var(--offset1) 2px, 0px var(--offset2) 4px, 0px var(--offset3) 8px;
