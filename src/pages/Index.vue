@@ -4,14 +4,12 @@
       class="site-intro"
       :class="{showInfo: showInfo}"
     >
+      <!--prettyhtml-ignore-->
       <h1>
-        emergen
-        <span class="t">t</span>
-        <wbr />
-        <span
-          class="dot"
-          aria-hidden
-        >⋅</span>seas
+        emergen<span class="t">t</span><wbr /><span
+  class="dot"
+  aria-hidden
+>⋅</span>seas
       </h1>
       <p class="tagline">
         <!-- creating original,
@@ -121,6 +119,7 @@ export default {
   },
   mounted() {
     console.re.log("remote log test");
+    console.re.log(window.DeviceOrientationEvent);
     var h = document.documentElement,
       b = document.body,
       st = "scrollTop",
