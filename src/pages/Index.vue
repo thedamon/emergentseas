@@ -179,16 +179,16 @@ html {
     overflow-x: hidden;
   }
 }
+
+:root {
+  --mouseXPct: 0.5;
+}
 </style>
 <style lang="scss" scoped>
 /* some variables for y'all */
 
 $font-fam-base: "PT Serif", "Times New Roman", Times, serif;
 $font-fam-display: "Open Sans", Helvetica, Arial, sans-serif;
-
-:root {
-  --mouseXPct: 0.5;
-}
 
 /* basic reset and typo */
 ul {
