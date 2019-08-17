@@ -140,6 +140,8 @@ export default {
 
     if (window.DeviceOrientationEvent) {
       window.addEventListener("deviceorientation", function(e) {
+        // this is somewhat arbitrary,
+        // but the rotation is much less visible with less of the gradient visible
         document.documentElement.style.setProperty(
           "--mouseXPct",
           (e.gamma / 1.8 + 50) / 10
