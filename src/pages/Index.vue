@@ -118,8 +118,8 @@ export default {
     }
   },
   mounted() {
-    console.re.log("remote log test");
-    console.re.log(window.DeviceOrientationEvent);
+    console.re && console.re.log("remote dog test");
+    console.re && console.re.log(window.DeviceOrientationEvent);
     var h = document.documentElement,
       b = document.body,
       st = "scrollTop",
@@ -194,6 +194,10 @@ html {
 
 $font-fam-base: "PT Serif", "Times New Roman", Times, serif;
 $font-fam-display: "Open Sans", Helvetica, Arial, sans-serif;
+
+:root {
+  --mouseXPct: 0.5;
+}
 
 /* basic reset and typo */
 ul {
