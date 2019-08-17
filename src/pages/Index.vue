@@ -120,6 +120,7 @@ export default {
     }
   },
   mounted() {
+    console.re.log("remote log test");
     var h = document.documentElement,
       b = document.body,
       st = "scrollTop",
