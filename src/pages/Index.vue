@@ -97,14 +97,7 @@ export default {
     title: "EmergentSeas",
     htmlAttrs: {
       class: "index"
-    },
-    script: [
-      {
-        src: "//console.re/connector.js",
-        id: "consolerescript",
-        "data-channel": "emergent-seas"
-      }
-    ]
+    }
   },
   data() {
     return {
@@ -118,9 +111,6 @@ export default {
     }
   },
   mounted() {
-    console.re && console.re.log("remote clog test");
-    console.re && console.re.log(window.DeviceOrientationEvent);
-    console.re && console.re.log(window);
     var h = document.documentElement,
       b = document.body,
       st = "scrollTop",
@@ -150,11 +140,9 @@ export default {
 
     if (window.DeviceOrientationEvent) {
       window.addEventListener("deviceorientation", function(e) {
-        // console.re && console.re.log(e.gamma, e.gamma / 1.8 + 50);
-        // console.re && console.re.log(e);
         document.documentElement.style.setProperty(
           "--mouseXPct",
-          (e.gamma / 1.8 + 50) / 100
+          (e.gamma / 1.8 + 50) / 10
         );
       });
     }
