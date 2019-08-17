@@ -149,6 +149,8 @@ export default {
 
     if (window.DeviceOrientationEvent) {
       window.addEventListener("deviceorientation", function(e) {
+        console.re && console.re.log(e.gamma, e.gamma / 1.8 + 50);
+        console.re && console.re.log(e);
         document.documentElement.style.setProperty(
           "--mouseXPct",
           e.gamma / 1.8 + 50
