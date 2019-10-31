@@ -94,7 +94,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "EmergentSeas",
+    titleTemplate: "EmergentSeas",
     htmlAttrs: {
       class: "index"
     }
@@ -312,13 +312,14 @@ h2 {
 h3 {
   margin: 0;
   font-size: 24px;
+  text-shadow: 1px 2px 0px rgba(187, 187, 204, 0.892);
+  font-weight: normal;
+  color: #ff6ed0ab;
+  mix-blend-mode: exclusion;
   @media (min-width: 500px) {
     font-size: 36px;
+    text-shadow: 1px 3px 0px rgba(187, 187, 204, 0.892);
   }
-  font-weight: bold;
-  color: #ff6ed0ab;
-  text-shadow: 1px 3px 0px rgba(187, 187, 204, 0.892);
-  mix-blend-mode: exclusion;
 }
 
 .tagline {
@@ -362,7 +363,7 @@ section {
     width: 125%;
     max-width: 100vw;
     height: 140%;
-    left: -10%;
+    left: -6%;
     top: -10%;
     opacity: 0.8;
     background: linear-gradient(4deg, black 0%, #202033 80%);
@@ -398,7 +399,7 @@ section {
   text-shadow: 1px 3px 0px rgba(187, 187, 204, 0.892);
   color: #1bca7194;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 400;
   font-family: $font-fam-display;
 }
 

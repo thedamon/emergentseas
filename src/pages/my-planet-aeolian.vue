@@ -1,5 +1,5 @@
 <template>
-  <div class="my-planet-aeolian">
+  <div>
     <pre aria-hidden="true">✷  · 　 　      　　.  　　 　　 　    　✵   ✷  　　  ·     　　  　　 　　✵  *  .         　　　　.  　 　 　　     　* 　　　 　　 · ✦         ✦ .· 　　 ·      ✦  ✵  · . 　  　   *      .          * 　 　　　　✷     .    　.         ·  　 .   　·. ✷   ⋆   ✹  . 　　 ✵      +  ˚      * 　　　　　* 　　　　　　  ⋆ 　　 ✧ *  · 　 . 　 ✧ ˚ 　 *   　 +  ˚   · .  .　　*  * 　 ˚  .　　　　　 +  　　　 *  *　　 　 　.  ·✵  . 　   ˚ . 　  ✵　 　　　 　　　　.  ˚ 　  　  　 ✧ ·  　　 ⊹ *  .  　　  　 　  　 · 　　　　　　　 ✦  ⊹ 　  　 　  　　   ✵                         ˚ 　　        ✹   .  　　   ✦ 　 *     　　  ✹  ˚   　   ·.　    　　 *　✷   　　　　　    　　  　　 .  　* ·  　     ✺ 　　　　　　　　.   *  　    　 ˚  　　 ✧    ⋆  *   　　 ✦  ·     　 *   . 　✵   *　     ··  　　 　　 　　 　　　　    　　　　 · . .  .  ✦ 　      ✵ * .  ·　　　　　 . 　　　     · ˚ 　 ·     ✵   　　 .　　 　　 . ·     .  .   　     ˚     　 　 ˚  *  ˚     　　. · * 　 　　　　    　 　 　 ⋆ 　　　　 　　     　   　　　 . 　　　  . 　　    　　  ⋆ 　　　　　 .    ˚ 　 　　　　　　　✷      　　 · 　　　　　     　　  　  　 　 　  　 ⋆     · 　*  .  ✧ ˚ 　 .  ✦ *      * 　· 　  　　 　　　    　 ·  ·  　 　✷        　 ✫ · *  ✹    </pre>
     <div class="container">
       <header>
@@ -112,7 +112,9 @@
             </p>
             <p>
               Instagram:
-              <a href="https://www.instagram.com/explore/tags/myplanetandme/">#myplanetandme</a>
+              <a
+                href="https://www.instagram.com/explore/tags/myplanetandme/"
+              >#myplanetandme</a>
             </p>
           </div>
           <div class="info-block">
@@ -174,9 +176,13 @@
           </div>
         </section>
       </main>
-     
+
       <div class="embed-container">
-        <iframe src='https://www.youtube.com/embed/lYFZSF-NJiM' frameborder='0' allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/lYFZSF-NJiM"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
       <main>
         <h2 class="new-section">Special Thanks:</h2>
@@ -189,12 +195,12 @@
 <script>
 export default {
   metaInfo: {
-    title: 'My Planet and Me at Aeolian Hall :: EmergentSeas',
+    title: "My Planet and Me at Aeolian Hall :: EmergentSeas",
     htmlAttrs: {
-      class: 'my-planet-aeolian' 
+      class: "my-planet-aeolian"
     }
-  },
-}
+  }
+};
 </script>
 
 <style>
@@ -224,7 +230,6 @@ body {
 }
 </style>
 <style scoped>
-
 h1,
 h2,
 h3,
@@ -472,20 +477,20 @@ ul {
 }
 </style>
 <style>
-  .embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .embed-container iframe,
-  .embed-container object,
-  .embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 </style>
