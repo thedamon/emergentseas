@@ -62,7 +62,7 @@
             </p>
             <!-- <a href="/dramatic-weather-unit">Visit project</a> -->
             <p>
-              <em>2019ish</em>
+              <em>Coming May 2020.</em>
             </p>
           </li>
         </ul>
