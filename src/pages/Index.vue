@@ -86,7 +86,7 @@
       </section>
     </main>
     <footer>
-      <p class="small">site copyright and designed rights deserved etc etc</p>
+      <p class="small">site copyright and designed rights deserved year of twenty whatever etc etc</p>
     </footer>
   </div>
 </template>
