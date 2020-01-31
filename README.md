@@ -1,14 +1,12 @@
-# Default starter for Gridsome
+# emergentseas
 
-This is the project you get when you run `gridsome create new-project`.
+The hotly official website for EmergentSeas, which is an umbrella for theatre/art pursuits at http://emergentseas.co and blabbed about on twitter at [@\_emergent_seas](https://twitter.com/_emergent_seas)
 
-### 1. Install Gridsome CLI tool if you don't have
+PR if you want... if I dig it.. it goes in.
 
-`npm install --global @gridsome/cli`
+It's built in gridsome
+because
 
-### 2. Create a Gridsome project
+### Using a Gridsome projectgit commit -am "edited README.md online with your mom"
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
 3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
