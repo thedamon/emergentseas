@@ -1,15 +1,9 @@
 <template>
   <div class="homepage">
-    <header
-      class="site-intro"
-      :class="{showInfo: showInfo}"
-    >
+    <header class="site-intro" :class="{showInfo: showInfo}">
       <!--prettyhtml-ignore-->
       <h1>
-        emergen<span class="t">t</span><wbr /><span
-  class="dot"
-  aria-hidden
->⋅</span>seas
+        emergen<span class="t">t</span><wbr /><span class="dot" aria-hidden>⋅</span>seas
       </h1>
       <p class="tagline">
         <!-- creating original,
@@ -26,10 +20,7 @@
         @click="toggleInfo"
         aria-label="what was that? tell me more."
       >{{ showInfo ? 'shhh! ^':'????? ⌄' }}</button>
-      <div
-        v-if="showInfo"
-        :style="{color: 'fff'}"
-      >
+      <div v-if="showInfo" :style="{color: 'fff'}">
         <p>We're a pretty slow paced group of word, movement and theatre artists making stuff as life allows.</p>
         <p>We focus on creating new works, punching tradition, and we delight in finding practitioners from other fields to collaborate with.</p>
         <p>We are based in London, Ontario.</p>
@@ -41,16 +32,29 @@
         <ul class="item-list-work">
           <li class="box">
             <h3 class="item-title">My Planet and Me</h3>
-            <p>A speculative solo performance about a disaffected young man who believes he has been contacted by a sentient planet.</p>
+            <p class="deets">solo theatre</p>
+            <p>A demoralized millennial's strange behaviour, he believes, is the result of being contacted telepathically by a distant sentient planet. Should he tell his girlfriend? Will anyone believe him? An exploration of love, loss and ego from one psyche across many galaxies.</p>
+            <p class="deets">written and performed by Damon Muma</p>
+            <p class="deets">directed by Cara Moyer and Kristin Bennett</p>
+            <br />
             <ul class="version-list">
               <li>
-                <a href="./my-planet-fringe">at 2017 London Fringe</a>
+                <a href="./my-planet-fringe">London Fringe (2017)</a>
+                <p class="deets">featuring original music by Wormwood</p>
               </li>
               <li>
-                <a href="./my-planet-aeolian">Aeolian Hall collaborative redux</a>
+                <a href="./my-planet-aeolian">Aeolian Hall special presentation (2018)</a>
+                <p
+                  class="deets"
+                >featuring live modular synth soundtrack by Timothy Glasgow, dance by Public Displays of Art, and light sculptures by Matthew Trueman</p>
               </li>
               <li>
-                <a href="https://www.youtube.com/watch?v=lYFZSF-NJiM">Short film</a>
+                <a href="https://www.youtube.com/watch?v=lYFZSF-NJiM">Trailer/Short film</a>
+                <p class="deets">directed by Matt Dupont</p>
+              </li>
+
+              <li>
+                <a href="./my-planet-excerpt">Not really an excerpt</a>
               </li>
             </ul>
           </li>
@@ -174,7 +178,7 @@ html {
     min-height: 100vh;
     position: relative;
     padding-bottom: 40px;
-    color: rgba(255, 255, 255, 0.445);
+    color: rgba(255, 255, 255, 0.545);
     background-attachment: fixed;
     overflow-x: hidden;
   }
@@ -381,6 +385,13 @@ section {
   color: rgba(255, 255, 255, 0.5);
 
   margin-bottom: 40px;
+}
+
+.deets {
+  font-size: 16px;
+  margin: 4px 0;
+  font-style: italic;
+  line-height: 1.3;
 }
 
 .item-list-team {
