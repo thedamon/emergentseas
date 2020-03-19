@@ -4,7 +4,7 @@ The hotly official website for EmergentSeas, which is an umbrella for theatre/ar
 
 PR if you want... if I dig it.. it goes in.
 
-It's built in gridsome
+It's built in gridsome  
 because
 
 ### Using a Gridsome projectgit commit -am "edited README.md online with your mom"

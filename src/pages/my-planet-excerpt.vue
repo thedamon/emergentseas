@@ -3,7 +3,12 @@
     <main>
       <header>
         <a class="back" href="/">← back</a>
-        <h1>Excerpt</h1>
+        <p>
+          <em>My planet & Me</em>
+        </p>
+        <h1>
+          <del>Excerpt</del>
+        </h1>
       </header>
       <p>You know, when I was growing up, it never did occur to me to wonder what I would do if I was the point of first contact for extra-terrestrial intelligence.</p>
       <p>Maybe you neither. It’s kind of a weird thing to wonder about.</p>

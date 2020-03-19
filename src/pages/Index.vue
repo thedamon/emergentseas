@@ -67,27 +67,34 @@
             <!-- <a href="/dramatic-weather-unit">Visit project</a> -->
             <p>
               <em>Coming May 2020.</em>
+              <a href="https://twitter.com/DrmatcWthrAgncy">
+                <svg class="tweetster" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.3 20.3A11.6 11.6 0 0020 8c.8-.5 1.4-1.3 2-2-.7.3-1.5.5-2.4.6.9-.5 1.5-1.4 1.8-2.3-.8.5-1.6.8-2.6 1a4.1 4.1 0 00-7 3.7C8.6 9 5.5 7.3 3.4 4.7c-1.1 2-.5 4.3 1.3 5.5a4 4 0 01-1.9-.5c0 2 1.4 3.7 3.3 4-.6.3-1.2.3-1.9.2.6 1.6 2.1 2.8 3.9 2.8A8.2 8.2 0 012 18.4c1.9 1.2 4 1.9 6.3 1.9"
+                  />
+                </svg>
+              </a>
             </p>
           </li>
         </ul>
       </section>
 
       <section class="team">
-        <h2 class="section-title">Team</h2>
+        <h2 class="section-title">Peeps</h2>
         <ul class="item-list-team box">
           <li>Kristin Bennett</li>
           <li>Cara Moyer</li>
           <li>Damon Muma</li>
         </ul>
       </section>
-      <section class="words">
+      <!-- <section class="words">
         <h2 class="section-title">Words</h2>
         <ul class="item-list-words box">
           <li>
             <em>En route.</em>
           </li>
         </ul>
-      </section>
+      </section>-->
     </main>
     <footer>
       <p class="small">site copyright and designed rights deserved year of twenty whatever etc etc</p>
@@ -464,6 +471,17 @@ button {
     // &:hover {
     //   transform: skew(0.02turn, 4deg);
     // }
+  }
+}
+
+.tweetster {
+  fill: rgba(255, 255, 255, 0.5);
+  top: 5px;
+  width: 30px;
+  position: relative;
+  &:hover {
+    fill: rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.7));
   }
 }
 </style>
