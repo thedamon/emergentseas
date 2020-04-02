@@ -102,7 +102,8 @@
     <footer>
       <p class="small">site copyright and designed rights deserved year of twenty whatever etc etc</p>
     </footer>
-    <LightGallery
+    <component
+      :is="galleryComponent"
       :images="myPlanetImages"
       :index="activeImage"
       :disable-scroll="true"
@@ -113,8 +114,6 @@
 </template>
 
 <script>
-import { LightGallery } from "vue-light-gallery";
-
 export default {
   metaInfo: {
     titleTemplate: "EmergentSeas",
@@ -126,6 +125,7 @@ export default {
     return {
       showInfo: false,
       activeImage: null,
+      galleryComponent: "div",
       myPlanetImages: [
         {
           title: "Fringe poster. Illustration by Robin Henry.",
@@ -166,9 +166,6 @@ export default {
         }
       ]
     };
-  },
-  components: {
-    LightGallery
   },
 
   methods: {
@@ -214,6 +211,11 @@ export default {
         );
       });
     }
+
+    // The `import` function returns a Promise.
+    import("vue-light-gallery").then(
+      cmpnt => (this.galleryComponent = cmpnt.LightGallery)
+    );
   }
 };
 </script>
