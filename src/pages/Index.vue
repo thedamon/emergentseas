@@ -56,6 +56,9 @@
               <li>
                 <a href="./my-planet-excerpt">Not really an excerpt</a>
               </li>
+              <li>
+                <a href="./gallery" @click.prevent="activeImage = 0">Gallery</a>
+              </li>
             </ul>
           </li>
           <li class="box">
@@ -99,10 +102,19 @@
     <footer>
       <p class="small">site copyright and designed rights deserved year of twenty whatever etc etc</p>
     </footer>
+    <LightGallery
+      :images="myPlanetImages"
+      :index="activeImage"
+      :disable-scroll="true"
+      background="rgba(0, 0, 0, 0.85)"
+      @close="activeImage = null"
+    />
   </div>
 </template>
 
 <script>
+import { LightGallery } from "vue-light-gallery";
+
 export default {
   metaInfo: {
     titleTemplate: "EmergentSeas",
@@ -112,8 +124,51 @@ export default {
   },
   data() {
     return {
-      showInfo: false
+      showInfo: false,
+      activeImage: null,
+      myPlanetImages: [
+        {
+          title: "Fringe poster. Illustration by Robin Henry.",
+          url: "my-planet-gallery/1.jpeg"
+        },
+        {
+          title: "Floored. Promo photo by Pam Haasen",
+          url: "my-planet-gallery/2.jpeg"
+        },
+        {
+          title: "Looking up. Promo photo by Pam Haasen",
+          url: "my-planet-gallery/3.jpeg"
+        },
+        {
+          title: "Looking out. Promo photo by Pam Haasen",
+          url: "my-planet-gallery/4.jpeg"
+        },
+        {
+          title: "Got it. Promo photo by Pam Haasen",
+          url: "my-planet-gallery/5.jpeg"
+        },
+        { title: "Promo photo by Pam Haasen", url: "my-planet-gallery/6.jpeg" },
+        { title: "Performers showcase.", url: "my-planet-gallery/7.jpeg" },
+        { title: "After the show.", url: "my-planet-gallery/8.jpeg" },
+        { title: "Aeolian poster.", url: "my-planet-gallery/9.jpeg" },
+        {
+          title:
+            "Aeoliean collaborators: Damon's gesticulations, Trueman's art, Tim and his synth, Nicki and dancers",
+          url: "my-planet-gallery/10.jpeg"
+        },
+        {
+          title: "Illicit photography during Aeolian performance",
+          url: "my-planet-gallery/11.jpeg"
+        },
+        {
+          title: "After the show at the Aeolian",
+          url: "my-planet-gallery/12.jpeg"
+        }
+      ]
     };
+  },
+  components: {
+    LightGallery
   },
 
   methods: {
@@ -165,6 +220,8 @@ export default {
 
 
 <style lang="scss">
+$font-fam-base: "PT Serif", "Times New Roman", Times, serif;
+$font-fam-display: "Open Sans", Helvetica, Arial, sans-serif;
 html {
   background: rgba(89, 104, 107, 1);
 
@@ -194,7 +251,19 @@ html {
 :root {
   --mouseXPct: 0.5;
 }
+
+// lightbox overrides:
+
+.light-gallery__text.light-gallery__text.light-gallery__text {
+  padding: 0;
+  font-family: $font-fam-base;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: lighter;
+}
 </style>
+
+
 <style lang="scss" scoped>
 /* some variables for y'all */
 
@@ -324,7 +393,7 @@ h3 {
   margin: 0;
   font-size: 24px;
   text-shadow: 1px 2px 0px rgba(187, 187, 204, 0.892);
-  font-weight: normal;
+  font-weight: 600;
   color: #ff6ed0ab;
   mix-blend-mode: exclusion;
   @media (min-width: 500px) {
@@ -390,8 +459,7 @@ section {
 }
 .item-list-work > li {
   color: rgba(255, 255, 255, 0.5);
-
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
 .deets {
@@ -427,6 +495,10 @@ section {
   padding: 24px 24px;
   text-align: center;
   opacity: 0.7;
+}
+
+.team {
+  margin-bottom: 300px;
 }
 
 footer {
